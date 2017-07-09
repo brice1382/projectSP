@@ -1,0 +1,56 @@
+[
+  {
+    "userId": 1,
+    "id": "brice721",
+    "email": "brice721@hotmail.com",
+    "username": "brice721",
+    "imageUrl": "images/Avatar.png",
+    "snippet": "Something about the user",
+    "password": "QmV0YWJlZTEz"
+  },
+  {
+    "userId": 2,
+    "id": "charleyvin2",
+    "email": "lyfling83@gmail.com",
+    "username": "charleyvin2",
+    "imageUrl": "images/spire.png",
+    "snippet": "Something about the user",
+    "password": "YW5kcmV3MjI5MDA="
+  },
+  {
+    "userId": 3,
+    "id": "F_User",
+    "email": "F_User@att.net",
+    "username": "F_User",
+    "imageUrl": "images/spire.png",
+    "snippet": "Something about the user",
+    "password": "Y2FudXNfbHVwaXMxMw=="
+  },
+  {
+    "userId": 4,
+    "id": "M_User",
+    "email": "M_User@yahoo.com",
+    "username": "M_User",
+    "imageUrl": "images/spire.png",
+    "snippet": "Something about the user",
+    "password": "U2Nvb3RlcjU4Mjc="
+  },
+  {
+    "userId": 5,
+    "id": "A_User",
+    "email": "A_User@spire-web.com",
+    "username": "A_User",
+    "imageUrl": "images/spire.png",
+    "snippet": "Something about the user",
+    "password": "dHJveWJlY2Ex"
+  },
+  {
+    "userId": 6,
+    "id": "B_User",
+    "email": "B_User@hotmail.com",
+    "username": "B_User",
+    "imageUrl": "images/spire.png",
+    "snippet": "Something about the user",
+    "password": "YmZ5YW4xMw=="
+  }
+]

@@ -1,0 +1,241 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li + li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+body {
+  /*padding: 20px;*/
+}
+
+h1 {
+  border-bottom: 2px solid black;
+  margin-top: 0;
+}
+
+/* View: Phone list */
+.users {
+  list-style: none;
+}
+
+.users li {
+  clear: both;
+  height: 115px;
+  padding-top: 15px;
+}
+
+.thumb {
+  float: left;
+  height: 100px;
+  margin: -0.5em 1em 1.5em 0;
+  padding-bottom: 1em;
+  width: 100px;
+  vertical-align: middle;
+}
+
+/* View: Phone detail */
+.user {
+  background-color: white;
+  display: none;
+  float: left;
+  height: 400px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  width: 400px;
+}
+
+.user:first-child {
+  display: block;
+}
+
+.user-images {
+  background-color: white;
+  float: left;
+  height: 450px;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.user-thumbs {
+  list-style: none;
+  margin: 0;
+}
+
+.user-thumbs img {
+  height: 100px;
+  padding: 1em;
+  width: 100px;
+}
+
+.user-thumbs li {
+  background-color: white;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  margin: 1em;
+}
+
+.goal-images {
+  background-color: white;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.specs {
+  clear: both;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.specs dt {
+  font-weight: bold;
+}
+
+.specs > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
+}
+
+.specs > li > span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#buttonHolder {
+  text-align: center;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: 1px solid azure; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-image: linear-gradient(to left, #000428, #004e92); /* Set a background color */
+  color: azure; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#brand {
+  font-family: 'Pacifico', cursive;
+}
+
+.space-down {
+  height: 75px;
+}
+
+.space-down-sm {
+  height: 50px
+}
+
+.boxShad {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=7, Direction=129, Color=#242424)"; /*IE 8*/
+  -moz-box-shadow: 4px 5px 7px 3px #242424; /*FF 3.5+*/
+  -webkit-box-shadow: 4px 5px 7px 3px #242424; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 4px 5px 7px 3px #242424; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=7, Direction=135, Color=#242424); /*IE 5.5-7*/
+}
+
+.tblRow {
+  width: 50px !important;
+}
+
+footer {
+  position: fixed;
+  padding-top: 16px !important;
+  width: 100%;
+  height: 50px;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  text-align: center;
+}
+
+.leftGrad {
+  background-image: linear-gradient(to left, #000428, #004e92);
+}
+
+.rightGrad {
+  background-image: linear-gradient(to right, #000428, #004e92);
+}
+
+.insetShad {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=40, Direction=124, Color=#000000)"; /*IE 8*/
+  -moz-box-shadow: 2px 3px 40px 8px #000000 inset; /*FF 3.5+*/
+  -webkit-box-shadow: 2px 3px 40px 8px #000000 inset; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 2px 3px 40px 8px #000000 inset; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=40, Direction=135, Color=#000000); /*IE 5.5-7*/
+}
+
+.myButton {
+  background-image: linear-gradient(to right, #000428, #004e92) !important;
+  color: azure !important;
+  border: 1px solid azure !important;
+}
+
+.myButton:hover {
+  border: 1px solid black !important;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=124, Color=#000000)" !important; /*IE 8*/
+  -moz-box-shadow: 2px 3px 50px -3px #000000 !important; /*FF 3.5+*/
+  -webkit-box-shadow: 2px 3px 50px -3px #000000 !important; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 2px 3px 50px -3px #000000 !important; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=135, Color=#000000) !important; /*IE 5.5-7*/
+}
+
+.successBtnGreen {
+  background-image: linear-gradient(to right, #099216, #022606);
+  color: azure;
+  border: 1px solid azure;
+}
+
+.successBtnGreen:hover {
+  border: 2px solid black;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=124, Color=#000000)"; /*IE 8*/
+  -moz-box-shadow: 2px 3px 50px -3px #000000; /*FF 3.5+*/
+  -webkit-box-shadow: 2px 3px 50px -3px #000000; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+  box-shadow: 2px 3px 50px -3px #000000; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=135, Color=#000000); /*IE 5.5-7*/
+}
+
+#myModalTitle {
+  text-align: center;
+}
+
+
+

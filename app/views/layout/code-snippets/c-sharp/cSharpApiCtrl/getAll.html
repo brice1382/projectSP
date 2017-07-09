@@ -1,0 +1,71 @@
+    <tr>
+        <td>
+            <span style="margin-left: 20px" class="snipCSComment">// GET: api/Users</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 20px" class="snipCSClass">public</span> <span class="snipCSNameS">JsonResult</span><<span class="snipCSNameS">UserModel</span>> GetAll()
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 20px">{</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 40px" class="snipCSClass">var </span>db = <span class="snipCSClass">new </span><span class="snipCSNameS">UserDbContext</span>();
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 40px" class="snipCSClass">var </span>result = db.StoredUser.Select(x => <span class="snipCSClass">new </span> <span class="snipCSNameS">UserModel</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 40px">{</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 60px">Id = x.Id,</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 60px">Username = x.Username,</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 60px">PasswordHash = x.PasswordHash,</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 60px">Email = x.Email,</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 60px">IsActive = x.IsActive</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 40px">}).ToList();</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 40px" class="snipCSClass">return </span>result;
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 20px">}</span>
+        </td>
+    </tr>
+

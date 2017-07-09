@@ -1,0 +1,59 @@
+<!--<section class="section4">-->
+    <!--<div layout="row" layout-wrap>-->
+        <!--<div flex="25"></div>-->
+        <!--<div flex="50">-->
+            <!--<md-content class="boxShad" style="border-radius: 6px; height: 300px; margin-top: 50px">-->
+                <!--<div ng-controller="SelectOptGroupController" class="md-padding" ng-cloak>-->
+                    <!--<div>-->
+                        <!--<h1 class="md-title">Pick your favored tech stack below</h1>-->
+                        <!--<md-input-container style="width: 150px; margin-right: 10px;">-->
+                            <!--<label>Operating System</label>-->
+                            <!--<md-select ng-model="system">-->
+                                <!--<md-option ng-repeat="system in systems" value="{{system}}">{{system}}</md-option>-->
+                            <!--</md-select>-->
+                        <!--</md-input-container>-->
+                        <!--<md-input-container>-->
+                            <!--<label>Framework</label>-->
+                            <!--<md-select ng-model="selectedFrameworks" multiple>-->
+                                <!--<md-optgroup label="Windows">-->
+                                    <!--<md-option ng-value="framework.name"-->
+                                               <!--ng-repeat="framework in frameworks | filter: {category: 'windows' }">-->
+                                        <!--{{framework.name}}-->
+                                    <!--</md-option>-->
+                                <!--</md-optgroup>-->
+                                <!--<md-optgroup label="Backends">-->
+                                    <!--<md-option ng-value="framework.name"-->
+                                               <!--ng-repeat="framework in frameworks | filter: {category: 'backend' }">-->
+                                        <!--{{framework.name}}-->
+                                    <!--</md-option>-->
+                                <!--</md-optgroup>-->
+                                <!--<md-optgroup label="Front-End">-->
+                                    <!--<md-option ng-value="framework.name"-->
+                                               <!--ng-repeat="framework in frameworks | filter: {category: 'other' }">-->
+                                        <!--{{framework.name}}-->
+                                    <!--</md-option>-->
+                                <!--</md-optgroup>-->
+                            <!--</md-select>-->
+                        <!--</md-input-container>-->
+                        <!--<md-input-container>-->
+                            <!--<label>Browser</label>-->
+                            <!--<md-select ng-model="browser">-->
+                                <!--<md-option ng-repeat="browser in browsers" value="{{browser}}">{{browser}}-->
+                                <!--</md-option>-->
+                            <!--</md-select>-->
+                        <!--</md-input-container>-->
+                        <!--<p ng-if="selectedFrameworks" style="font-weight: bold;">You are interested in-->
+                            <!--{{system.toUpperCase()}} operating systems with-->
+                            <!--{{printSelectedFrameworks()}} for back-end/front-end code and {{browser}} for your-->
+                            <!--preferred browser.</p>-->
+                    <!--</div>-->
+                    <!--<br>-->
+                    <!--<br>-->
+                    <!--<md-button class="customBtnPrimary md-raised myButton" style="border: 1px solid azure"-->
+                               <!--type="button">Send Stack-->
+                    <!--</md-button>-->
+                <!--</div>-->
+            <!--</md-content>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</section>-->

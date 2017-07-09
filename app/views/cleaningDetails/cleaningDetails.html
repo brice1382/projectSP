@@ -1,0 +1,75 @@
+<div ng-if="!isAuthenticated">
+    <h1 style="text-align: center">You are not authenticated. <a href="#!/login">Login</a></h1>
+</div>
+<div ng-if="isAuthenticated">
+    <div class="col-md-6">
+        <div class="container list-images" style="background: none; width: 100%">
+            <img class="list" style="background: none; height: 400px; width: 400px" ng-src="{{img}}"
+                 ng-class="{selected: img === vm.mainImageUrl}"
+                 ng-repeat="img in vm.list.images">
+        </div>
+        <br>
+        <div class="" style="margin-left: 50px">
+            <a type="button" style="font-size: 35px; font-weight: bold; color: black" href="javascript:history.back();">
+                <i class="fa fa-arrow-left"> </i>BACK</a>
+        </div>
+    </div>
+
+    <div class="container" style="width: 50%" style="background-color: #e3e3db" ng-controller="DashboardCtrl">
+        <div class="row">
+            <br>{{title}}
+            <form role="form">
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password: </label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <select class="form-control" ng-model="list" id="Task">
+                        <option class="form-control" ng-repeat="option.id in list" value="{{option.id}}">{{option.value}}sdfgasdf
+                        </option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+                <br>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="container" style="width: 100%">
+            <h1 style="font-size: 30px; color: black; font-weight: bold">User Info</h1>
+            <hr style="padding: 0; width: 50%; border: 1px solid black; margin: 5px 0 15px 0">
+            <h1 style="color: black; font-weight: bold">Helpful Snippet:</h1>
+            <h1 style="color: black; line-height: 30px">{{vm.list.snippet}}</h1>
+            <br>
+            <h1 style="color: black; font-weight: bold">Area:</h1>
+            <h1 style="color: black; line-height: 30px">{{vm.list.area}}</h1>
+            <br>
+            <h1 style="color: black; font-weight: bold">Schedule:</h1>
+
+            <ul class="phones" style="height: auto">
+                <li style="height: 115px" ng-repeat="list in vm.lists | filter:vm.query | orderBy:vm.orderProp"
+                    class="thumbnail">
+                    <a style="margin: 3px 20px auto 0" href="#!/lists/{{list.listId}}" class="thumb">
+                        <img style="" ng-src="{{list.imageUrl}}" alt="{{list.listItem}}"/>
+                    </a>
+                    <a href="#!/lists/{{list.listId}}">{{list.area}}</a>
+                    <hr style="border: 1px solid black; margin: 5px 0 5px 0; width: 200px">
+                    <p style="color: black">{{user.email}}</p>
+                    <p style="color: black">{{user.snippet}}</p>
+                </li>
+            </ul>
+            <!--<h1 style="color: black; line-height: 30px">{{vm.list.schedule}}</h1>-->
+            <div style="height: 100px"></div>
+            <ul style="list-style: none" class="user-thumbs">
+                <li ng-repeat="img in vm.list.images">
+                    <img style="height: 100px; width: 100px" ng-src="{{img}}" ng-click="vm.setImage(img)">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

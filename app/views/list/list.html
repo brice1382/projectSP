@@ -1,0 +1,197 @@
+<style>
+    .myButton {
+        background-image: linear-gradient(to right, #000428, #004e92) !important;
+        color: azure !important;
+        border: 1px solid azure !important;
+    }
+
+    .myButton:hover {
+        border: 2px solid black !important;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=124, Color=#000000)" !important; /*IE 8*/
+        -moz-box-shadow: 2px 3px 50px -3px #000000 !important; /*FF 3.5+*/
+        -webkit-box-shadow: 2px 3px 50px -3px #000000 !important; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+        box-shadow: 2px 3px 50px -3px #000000 !important; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+        filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=135, Color=#000000) !important; /*IE 5.5-7*/
+    }
+
+    #butts {
+        background-image: linear-gradient(to right, #000428, #004e92) !important;
+        color: azure !important;
+        border: 1px solid azure !important;
+    }
+
+    #butts:hover {
+        border: 2px solid black !important;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=124, Color=#000000)" !important; /*IE 8*/
+        -moz-box-shadow: 2px 3px 50px -3px #000000 !important; /*FF 3.5+*/
+        -webkit-box-shadow: 2px 3px 50px -3px #000000 !important; /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+        box-shadow: 2px 3px 50px -3px #000000 !important; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+        filter: progid:DXImageTransform.Microsoft.Shadow(Strength=50, Direction=135, Color=#000000) !important; /*IE 5.5-7*/
+    }
+</style>
+
+<div ng-if="isAuthenticated" style="height: auto">
+    <div class="container" ng-controller="ListCtrl">
+        <h1 style="text-align: center; color: black; font-size: x-large">{{title}}</h1>
+        <br>
+        <br>
+        <div class="container" style="background-color: #e3e3db; border-radius: 6px;">
+            <br>
+            <label>List</label>
+            <select ng-model="selectItem" ng-selected="1" ng-options="item.name for item in products">
+                <option value="">Select One...</option>
+            </select>
+            <br>
+            <div class="well" style="height: auto">
+                <ol>
+                    <li ng-model="selectedItems" ng-repeat="item in selectItem.items">
+                        <a style="cursor: pointer" id="clipTest" data-clipboard-text="{{item}}">{{item}} <i class="fa fa-clipboard"></i></a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <!--<div class="form-group">-->
+            <!--<div class="col-md-8 col-md-offset-2" ng-controller="ListCtrl">-->
+                <!--<label class="control-label" for="test">Service Questions</label>-->
+                <!--<select id="test" ng-model="firstItem" ng-options="item.name for item in list" class="form-control">-->
+                    <!--<option>Please select</option>-->
+                <!--</select>-->
+                <!--<br>-->
+                <!--<select ng-model="secondItem" ng-options="item for item in firstItem.items" class="form-control">-->
+                    <!--<option>Please select</option>-->
+                <!--</select>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="container" style="height: auto; background-color: #e3e3db; border-radius: 6px;" ng-controller="MyTodoCtrl">
+            <br>
+            <h1 style="color: black; text-align: center; font-size: 25px">Shopping List</h1>
+            <p class="help-block" style="text-align: center">
+                Select from the two categories below to create a shopping list of cleaning supplies. You copy and paste
+                by clicking the item and pasting it in the input or simply type your own supply item in the input to add it
+                to your list.
+            </p>
+            <hr style="border: 1px solid black; margin-top: 5px">
+            <br>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <h2>Add To List:</h2>
+                    <form ng-submit="todoAdd()">
+                        <div class="row">
+                            <div class="form-group col-md-7">
+                                <label for="todo" class="control-label"></label>
+                                <input class="form-control" id="todo" type="text" ng-model="todoInput" size="50" placeholder="Add New">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-2">
+                                <label for="butts" class="control-label"></label>
+                                <!--<input class="form-control" id="butt" type="submit" value="Add New">-->
+                                <button id="butts" class="btn btn-default" type="button" ng-click="todoAdd()">Add New</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="form-group" ng-repeat="x in todoList">
+                        <label for="cBox" class="control-label"></label>
+                        <input id="cBox" type="checkbox" ng-model="x.done"> <span ng-model="value" ng-bind="x.todoText"></span>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-default myButton" ng-click="remove()">Remove marked</button>
+                        <button class="btn btn-default myButton" ng-click="save()">Save List</button>
+                        <button class="btn btn-default myButton" ng-click="getList()">Get List<span class="badge">{{badge}}</span></button>
+                        <button class="btn btn-default myButton" ng-click="clearList()">Clear List</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <h2>List Items:</h2>
+                    <div class="form-group">
+                        <label class="control-label"></label>
+                        <textarea id="list" rows="10" readonly class="form-control uploadForm"></textarea>
+                        <div id="testDiv" style="height: auto">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 style="text-align: center; color: black; font-size: large"><i class="fa fa-arrow-down"></i> Select Household Areas Below <i class="fa fa-arrow-down"></i></h1>
+            <br>
+            <div class="row">
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <select ng-model="newList.Area"
+                            ng-options="obj.id as obj.area for obj in area"
+                            ng-change="getAreaTime()"
+                            class="form-control"
+                            ng-required="true"
+                            id="area">
+                        <option value="{{firstArea}}">{{firstArea}}</option>
+                    </select>
+                </div>
+            </div>
+            <!--TODO: Figure out how to stop it from displaying all tasks when you switch areas.-->
+            <div class="row">
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <select ng-model="newList.Time"
+                            ng-options="x.Id as x.time for x in times"
+                            ng-change="getTimeTask()"
+                            class="form-control"
+                            ng-required="true"
+                            id="time">
+                        <option value="{{firstTime}}">{{firstTime}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="hidden">
+                    <select ng-model="newList.Task"
+                            ng-options="x.Id as x.task for x in tasks"
+                            class="form-control"
+                            ng-required="true"
+                            id="task">
+                        <option value="">-- Choose Task --</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="well" style="height: auto">
+                    <ul>
+                        <li ng-repeat="task in tasks" ng-model="newList.Task">{{task.task}}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="spacer"></div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+</div>
+<script>
+    var clipboard = new Clipboard('#clipTest');
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>

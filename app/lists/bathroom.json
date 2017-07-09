@@ -1,0 +1,60 @@
+{
+  "listId": "bathroom",
+  "id": 1,
+  "area": "Bathroom",
+  "snippet": "Helpful starter list for keeping on top of the bathroom.",
+  "images": [
+    "images/spire.png"
+  ],
+  "schedule": [
+    {
+      "category": "Daily",
+      "listItems": [
+        "Quickly wipe out sink and tubs after each use",
+        "Hang towels to dry",
+        "Wipe up spills immediately",
+        "Change hand towels"
+      ]
+    },
+    {
+      "category": "Weekly",
+      "listItems": [
+        "Sweep and mop floor",
+        "Empty trash can and recycling",
+        "Wash towels and wash cloths (or twice a week if desired)",
+        "Vacuum rugs",
+        "Clean mirrors",
+        "Clean and disinfect sink and countertops",
+        "Clean shower and bath tub",
+        "Clean and disinfect toilet",
+        "Dust",
+        "Check and restock toiletries and cleaning supplies",
+        "Flush drains with boiling water"
+      ]
+    },
+    {
+      "category": "Monthly",
+      "listItems": [
+        "Clean and organize cabinets and drawers",
+        "Deal with any mold and mildew",
+        "Wash trash can"
+      ]
+    },
+    {
+      "category": "Quarterly",
+      "listItems": [
+        "Clean grout",
+        "Dispose of old medication",
+        "Wash shower curtain",
+        "Wash rugs"
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+{
+  "listId": "house",
+  "id": 2,
+  "area": "House",
+  "snippet": "Get in a clear routine for all purpose house cleaning.",
+  "images": [
+    "images/spire.png"
+  ],
+  "schedule": [
+    {
+      "Category": "Daily Tasks",
+      "listItems": [
+        "Tidy and neaten each room in the house",
+        "Clean up kitchen after meals",
+        "Deal with spills immediately",
+        "Put away (in a designated place) everything that comes into the home,",
+        "and empty anything that has become too full"
+      ]
+    },
+    {
+      "Category": "Weekly Tasks",
+      "listItems": [
+        "Clean bathrooms",
+        "Clean kitchen",
+        "Clean bedrooms",
+        "Clean home office, and deal with weekly paperwork and bill paying",
+        "Clean all other rooms in your home",
+        "Laundry",
+        "Menu planning, making grocery list and grocery shopping"
+      ]
+    },
+    {
+      "Category": "Quarterly Tasks",
+      "listItems": [
+        "Sweep garage, basement and attic",
+        "Wash or air pillows",
+        "Wash windows"
+      ]
+    },
+    {
+      "Category": "Biannual Tasks",
+      "listItems": [
+        "Air and turn mattresses",
+        "Clean drapes and curtains",
+        "Wash rugs and clean carpets",
+        "Clean basement, garage and attic"
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+

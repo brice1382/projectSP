@@ -1,0 +1,85 @@
+<div ng-if="!isAuthenticated">
+    <h1 style="text-align: center">You are not authenticated. <a href="#!/login">Login</a></h1>
+</div>
+<div ng-if="isAuthenticated">
+    <div class="container contactContainer" ng-controller="ContactCtrl">
+        <br>
+        <form class="form-horizontal contactForm" ng-submit="SendContactForm" name="contact" novalidate>
+            <fieldset>
+                <legend id="formLegend">Contact Request Form</legend>
+                <hr>
+                <div class="form-group">
+                    <div class="col-md-8 col-md-offset-2">
+                        <label class="control-label" for="name">Full Name</label>
+                        <input id="name" name="name" ng-model="name" type="text" placeholder="Full Name..."
+                               class="form-control input-md" required autofocus>
+                    </div>
+                </div>
+                Name: {{name}}
+                <div class="form-group">
+                    <div class="col-md-8 col-md-offset-2">
+                        <label class="control-label" for="contactPhone">Phone</label>
+                        <input id="contactPhone" ng-model="phone" name="phone" type="text" placeholder="Phone Number..."
+                               class="form-control input-md">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-8 col-md-offset-2">
+                        <label class="control-label" for="email">Return Email</label>
+                        <input id="email" ng-model="email" name="email" type="email" placeholder="Your return email..."
+                               class="form-control input-md" required>
+                        <p class="help-block" style="color: red"
+                           ng-show="contact.email.$dirty && contact.email.$invalid">Please Enter Proper Email Format</p>
+                    </div>
+                </div>
+                <!--<div class="form-group">-->
+                    <!--<div class="col-md-8 col-md-offset-2" ng-controller="ContactCtrl">-->
+                        <!--<label class="control-label" for="categorySelect">Category</label>-->
+                        <!--<select name="categorySelect" ng-model="select" id="categorySelect" class="form-control">-->
+                            <!--<option value="">Select One...</option>-->
+                            <!--<option value="1">Pricing</option>-->
+                            <!--<option value="2">Services</option>-->
+                            <!--<option value="3">Plans</option>-->
+                            <!--<option value="4">General Help</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="form-group">
+                    <div class="col-md-8 col-md-offset-2">
+                        <label class="control-label" for="question">Question</label>
+                        <textarea style="resize: none" maxlength="250" class="form-control" ng-model="question"
+                                  id="question" name="question" placeholder="Send us your questions..."></textarea>
+                        <span class="help-block" id="text-spot"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="submit"></label>
+                    <div class="col-md-8 col-md-offset-2">
+                        <button id="submit" name="submit" ng-click="send()" class="btn btn-success">Submit</button>
+                        <button id="cancel" name="cancel" class="btn btn-inverse">Cancel</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <p>Pristine: {{contact.$pristine}}</p>
+        <br>
+    </div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+</div>
+<script>
+    $(document).ready(function () {
+        var max = 250;
+        $('#text-spot').html(max + ' Characters Left!!!');
+
+        $('#question').keyup(function () {
+            var textLength = $('#question').val().length;
+            var textLeft = max - textLength;
+
+            $('#text-spot').html(textLeft + ' Characters Left!!!');
+        });
+        $('#contactPhone').mask('(999) 999-9999');
+    });
+</script>
+
+

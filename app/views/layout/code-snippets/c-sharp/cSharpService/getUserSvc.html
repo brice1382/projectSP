@@ -1,0 +1,31 @@
+<tr>
+    <td>
+        <span style="margin-left: 20px" class="snipCSClass">public</span> <span class="snipCSNameS">UserDAO</span> _userDAO = <span class="snipCSClass">null</span>;
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 20px" class="snipCSClass">public</span> <span class="snipCSNameS">UserModel</span> GetUser(<span class="snipCSClass">int </span> id)
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 20px">{</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 40px" class="snipCSClass">var </span>Users = _userDAO.GetUser(id);
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 40px" class="snipCSClass">return </span><span class="snipCSNameS">UserLocator</span>.Mapper.Map<<span class="snipCSNameS">UserModel</span>>(Users);
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 20px">}</span>
+    </td>
+</tr>
+

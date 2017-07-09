@@ -1,0 +1,568 @@
+<style>
+    /*Custom styles*/
+    .customFab {
+        margin-bottom: 0;
+    }
+
+    h1.page-header {
+        margin-top: -5px;
+    }
+
+    .sidebar {
+        padding-left: 0;
+    }
+
+    .main-container {
+        background: #FFF;
+        padding-top: 15px;
+        margin-top: -20px;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    :focus {
+        outline: none;
+    }
+
+    .side-menu {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #f8f8f8;
+        border-right: 1px solid #e7e7e7;
+    }
+
+    .side-menu .navbar {
+        border: none;
+    }
+
+    .side-menu .navbar-header {
+        width: 100%;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .side-menu .navbar-nav .active a {
+        background-color: transparent;
+        margin-right: -1px;
+        border-right: 5px solid #e7e7e7;
+    }
+
+    .side-menu .navbar-nav li {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .side-menu .navbar-nav li a {
+        padding: 15px;
+    }
+
+    .side-menu .navbar-nav li a .glyphicon {
+        padding-right: 10px;
+    }
+
+    .side-menu #dropdown {
+        border: 0;
+        margin-bottom: 0;
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .side-menu #dropdown .caret {
+        float: right;
+        margin: 9px 5px 0;
+    }
+
+    .side-menu #dropdown .indicator {
+        float: right;
+    }
+
+    .side-menu #dropdown > a {
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .side-menu #dropdown .panel-body {
+        padding: 0;
+        background-color: #f3f3f3;
+    }
+
+    .side-menu #dropdown .panel-body .navbar-nav {
+        width: 100%;
+    }
+
+    .side-menu #dropdown .panel-body .navbar-nav li {
+        padding-left: 15px;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .side-menu #dropdown .panel-body .navbar-nav li:last-child {
+        border-bottom: none;
+    }
+
+    .side-menu #dropdown .panel-body .panel > a {
+        margin-left: -20px;
+        padding-left: 35px;
+    }
+
+    .side-menu #dropdown .panel-body .panel-body {
+        margin-left: -15px;
+    }
+
+    .side-menu #dropdown .panel-body .panel-body li {
+        padding-left: 30px;
+    }
+
+    .side-menu #dropdown .panel-body .panel-body li:last-child {
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .side-menu #search-trigger {
+        background-color: #f3f3f3;
+        border: 0;
+        border-radius: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 15px 18px;
+    }
+
+    .side-menu .brand-name-wrapper {
+        min-height: 50px;
+    }
+
+    .side-menu .brand-name-wrapper .navbar-brand {
+        display: block;
+    }
+
+    .side-menu #search {
+        position: relative;
+        z-index: 1000;
+    }
+
+    .side-menu #search .panel-body {
+        padding: 0;
+    }
+
+    .side-menu #search .panel-body .navbar-form {
+        padding: 0;
+        padding-right: 50px;
+        width: 100%;
+        margin: 0;
+        position: relative;
+        border-top: 1px solid #e7e7e7;
+    }
+
+    .side-menu #search .panel-body .navbar-form .form-group {
+        width: 100%;
+        position: relative;
+    }
+
+    .side-menu #search .panel-body .navbar-form input {
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        width: 100%;
+        height: 50px;
+    }
+
+    .side-menu #search .panel-body .navbar-form .btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: 0;
+        border-radius: 0;
+        background-color: #f3f3f3;
+        padding: 15px 18px;
+    }
+
+    /* Main body section */
+    .side-body {
+        margin-left: 310px;
+    }
+
+    /* small screen */
+    @media (max-width: 768px) {
+        .side-menu {
+            position: relative;
+            width: 100%;
+            height: 0;
+            border-right: 0;
+        }
+
+        .side-menu .navbar {
+            z-index: 999;
+            position: relative;
+            height: 0;
+            min-height: 0;
+            background-color: transparent !important;
+            border-color: transparent !important;
+        }
+
+        .side-menu .brand-name-wrapper .navbar-brand {
+            display: inline-block;
+        }
+
+        /* Slide in animation */
+        @-moz-keyframes slidein {
+            0% {
+                left: -300px;
+            }
+            100% {
+                left: 10px;
+            }
+        }
+        @-webkit-keyframes slidein {
+            0% {
+                left: -300px;
+            }
+            100% {
+                left: 10px;
+            }
+        }
+        @keyframes slidein {
+            0% {
+                left: -300px;
+            }
+            100% {
+                left: 10px;
+            }
+        }
+        @-moz-keyframes slideout {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: -300px;
+            }
+        }
+        @-webkit-keyframes slideout {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: -300px;
+            }
+        }
+        @keyframes slideout {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: -300px;
+            }
+        }
+        /* Slide side menu*/
+        /* Add .absolute-wrapper.slide-in for scrollable menu -> see top comment */
+        .side-menu-container > .navbar-nav.slide-in {
+            -moz-animation: slidein 300ms forwards;
+            -o-animation: slidein 300ms forwards;
+            -webkit-animation: slidein 300ms forwards;
+            animation: slidein 300ms forwards;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .side-menu-container > .navbar-nav {
+            /* Add position:absolute for scrollable menu -> see top comment */
+            position: fixed;
+            left: -300px;
+            width: 300px;
+            top: 43px;
+            height: 100%;
+            border-right: 1px solid #e7e7e7;
+            background-color: #f8f8f8;
+            overflow: auto;
+            -moz-animation: slideout 300ms forwards;
+            -o-animation: slideout 300ms forwards;
+            -webkit-animation: slideout 300ms forwards;
+            animation: slideout 300ms forwards;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        @-moz-keyframes bodyslidein {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 300px;
+            }
+        }
+        @-webkit-keyframes bodyslidein {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 300px;
+            }
+        }
+        @keyframes bodyslidein {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 300px;
+            }
+        }
+        @-moz-keyframes bodyslideout {
+            0% {
+                left: 300px;
+            }
+            100% {
+                left: 0;
+            }
+        }
+        @-webkit-keyframes bodyslideout {
+            0% {
+                left: 300px;
+            }
+            100% {
+                left: 0;
+            }
+        }
+        @keyframes bodyslideout {
+            0% {
+                left: 300px;
+            }
+            100% {
+                left: 0;
+            }
+        }
+        /* Slide side body*/
+        .side-body {
+            margin-left: 5px;
+            margin-top: 70px;
+            position: relative;
+            -moz-animation: bodyslideout 300ms forwards;
+            -o-animation: bodyslideout 300ms forwards;
+            -webkit-animation: bodyslideout 300ms forwards;
+            animation: bodyslideout 300ms forwards;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        .body-slide-in {
+            -moz-animation: bodyslidein 300ms forwards;
+            -o-animation: bodyslidein 300ms forwards;
+            -webkit-animation: bodyslidein 300ms forwards;
+            animation: bodyslidein 300ms forwards;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        /* Hamburger */
+        .navbar-toggle-sidebar {
+            border: 0;
+            float: left;
+            padding: 18px;
+            margin: 0;
+            border-radius: 0;
+            background-color: #f3f3f3;
+        }
+
+        /* Search */
+        #search .panel-body .navbar-form {
+            border-bottom: 0;
+        }
+
+        #search .panel-body .navbar-form .form-group {
+            margin: 0;
+        }
+
+        .side-menu .navbar-header {
+            /* this is probably redundant */
+            position: fixed;
+            z-index: 3;
+            background-color: #f8f8f8;
+        }
+
+        /* Dropdown tweek */
+        #dropdown .panel-body .navbar-nav {
+            margin: 0;
+        }
+    }
+</style>
+<div style="margin-top: 50px" ng-if="!isAuthenticated">
+    <h1 style="text-align: center">You are not authenticated. <a href="#!/login">Login</a></h1>
+</div>
+<div ng-if="isAuthenticated">
+    <nav style="margin-top: 0" class="navbar navbar-default navbar-static-top" id="test">
+        <div class="container-fluid">
+            <div class="navbar-header black">
+                <button type="button" class="navbar-toggle navbar-toggle-sidebar collapsed">
+                    MENU
+                </button>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand black" href>
+                    About Page <span> - Hello, {{loggedInUser}}!!!</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown ">
+                        <a class="dropdown-toggle black" data-toggle="dropdown" role="button" aria-expanded="false">
+                            My Sites
+                            <span class="fa fa-caret-down"></span>
+                        </a>
+                        <!-- TODO: Figure out how to get the 'My Sites' link to have a different background on hover but not the links below. -->
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="" style="color: black">
+                                <a href="http://www.spire-web.com" target="_blank">
+                                    <i class="fa fa-globe"></i> Spire Web <i class="fa fa-external-link"></i>
+                                </a>
+                            </li>
+                            <li class="" style="color: black">
+                                <a href="http://www.rareupcycle.com" target="_blank">
+                                    <i class="fa fa-recycle"></i> Rare UpCycle <i class="fa fa-external-link"></i>
+                                </a>
+                            </li>
+                            <li class="" style="color: black">
+                                <a href="http://www.nlbcwalker.com" target="_blank"><i class="fa fa-bell"></i> New Life Baptist <i class="fa fa-external-link"></i>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li class="" style="color: black">
+                                <a href="">
+                                    <i class="fa fa-sign-out"></i>
+                                    Logout
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid main-container">
+        <div ng-include="'views/layout/components/sidebar-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/c-sharp/csharp-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/c-sharp/csharp.apiCtrl-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/c-sharp/csharp.ctrl-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/c-sharp/csharp.dao-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/c-sharp/csharp.service-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/c-sharp/csharp.model-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/c-sharp/csharp.entity-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/c-sharp/csharp.userDbContext-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/c-sharp/csharp.userLocator-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/c-sharp/csharp.mapperConfig-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/javascript/js-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/angular/angular.ctrl-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/angular/angular.directive-tpl.html'"></div>
+        <div ng-include="'views/layout/code-snippets/angular/angular.service-tpl.html'"></div>
+        <!-- Content for the dashboard needs to be within this tag -->
+        <div class="col-md-10 content boxShad">
+            <br>
+            <div ng-include="'views/layout/components/panel-tpl.html'"></div>
+            <hr>
+
+            <!-- =========================================================================== -->
+            <!-- Divider for me to be able to separate tables visually. Should be removed.   -->
+            <!-- =========================================================================== -->
+
+            <table class="table table-bordered table-condensed table-striped table-hover boxShad">
+                <thead>
+                <tr>
+                    <th class="span8">My Goals</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="goal in DbdCtrl.goals">
+                    <td>
+                        <a href="#!/dashboard/goals/{{goal.id}}">{{goal.title}}</a><br>
+                        {{goal.snippet}}<br>
+                    </td>
+                </tr>
+                <tr ng-show="!DbdCtrl.goals.length">
+                    <td colspan="4">I have no goals.</td>
+                </tr>
+                </tbody>
+            </table>
+            <hr>
+
+            <!-- =========================================================================== -->
+            <!-- Divider for me to be able to separate tables visually. Should be removed.   -->
+            <!-- =========================================================================== -->
+
+            <table class="table table-bordered table-condensed table-striped table-hover">
+                <thead>
+                <tr>
+                    <th class="docTableHead" colspan="4">
+                        Documents
+                    </th>
+                </tr>
+                <tr>
+                    <th class="sectionHead" colspan="4">
+                        Resume
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="doc in docs">
+                    <td class="thOne">
+                        <img src="{{doc.icon}}" title="PDF" width="35" height="35">
+                    </td>
+                    <td>
+                        <p style="line-height: 38px; color: black">
+                            {{doc.title}}
+                        </p>
+                    </td>
+                    <td>
+                        <p style="line-height: 38px; color: black">
+                            {{doc.helper}}
+                        </p>
+                    </td>
+                    <td class="thThree">
+                        <a style="line-height: 38px" href="{{doc.link}}" target="_blank">View/Download</a>
+                    </td>
+                </tr>
+                </tbody>
+                <!-- =========================================================================== -->
+                <tbody>
+                <tr>
+                    <th class="sectionHead" colspan="4">
+                        References
+                    </th>
+                </tr>
+                <tr ng-repeat="ref in refs">
+                    <td>
+                        <img src="{{ref.icon}}" title="PDF" width="35" height="35">
+                    </td>
+                    <td>
+                        <p style="line-height: 38px; color: black">
+                            {{ref.title}}
+                        </p>
+                    </td>
+                    <td>
+                        <p style="line-height: 38px; color: black">
+                            {{ref.helper}}
+                        </p>
+                    </td>
+                    <td>
+                        <a style="line-height: 38px" href="{{ref.link}}" target="_blank">View/Download</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- End dashboard content -->
+            <br>
+        </div>
+    </div>
+</div>
+
+<div style="height: 200px; background-color: white;"></div>
+<!--<section style="height: 400px; background-color: white;"></section>-->
+<script>
+    $(document).ready(function () {
+        window.scrollTo(0, 0);
+    })
+</script>

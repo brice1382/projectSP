@@ -1,0 +1,29 @@
+<style>
+    ul {
+        display: none;
+    }
+
+    md-content {
+        width: 45%;
+        border-radius: 6px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body {
+        height: auto;
+    }
+</style>
+<div class="container" ng-controller="LoginCtrl">
+    <div class="card card-container" ng-if="!isAuthenticated">
+         <!--<img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" />-->
+        <img id="profile-img" class="profile-img-card" src="../../images/spire.png"/>
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin" novalidate>
+            <button class="btn btn-primary" ng-click="vm.authService.login()">Log In</button>
+        </form>
+    </div>
+    <div class="container" ng-if="isAuthenticated">
+        <h1 style="text-align: center">Welcome <a href="#!/home">ENTER</a></h1>
+    </div>
+</div>

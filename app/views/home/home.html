@@ -1,0 +1,342 @@
+<div ng-if="!isAuthenticated">
+    <h1 style="text-align: center">You are not authenticated. <a href="#!/login">Login</a></h1>
+</div>
+<div ng-if="isAuthenticated">
+    <div layout="row" layout-wrap id="ts">
+        <div class="container boxShad custom-bg hide-xs" style="background-color: #a5a5a5; border-radius: 6px;">
+            <div class="animated flipInX">
+                <div style="height: 30px"></div>
+                <div class="jumbotron hide-xs show-gt-sm insetShad boxShad">
+                    <div style="height: 10px"></div>
+                    <h1 class="jumbotronTxt">
+                        <i class="fa fa-chevron-left"></i>Brandon Rice<i class="fa fa-chevron-right"></i>
+                    </h1>
+                    <div style="height: 20px"></div>
+                    <p class="help-block" style="text-align: center">Web Developer, Problem Solver, Energy Drink
+                        Consumer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hide-gt-sm">
+        <h1 style="text-align:center">This be for the small screens!!!</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="parallax" style="height: 300px;">
+        <div class="animated slideInLeft" layout="row" layout-wrap>
+            <div flex="25"></div>
+            <!-- TODO: Figure out a better way to set the margin on the top.-->
+            <div flex="50">
+                <md-content class="boxShad" style="border-radius: 6px; height: auto; margin-top: 50px">
+                    <br>
+                    <h1 style="text-align: center; color: black; font-size: 20px">Thought Process</h1>
+                    <hr style="border: 1px solid black; margin-top: 5px">
+                    <p style="text-align: center; padding-left: 15px; padding-right: 15px">
+                        Being a web developer and recently trying on the hat of stay at home dad I thought to myself
+                        <span style="font-style: italic; font-weight: bold">There has to be a better way to manage the house.</span>
+                        So I
+                        started applying some Agile Methodologies to the way my wife and I ran our house. So, after
+                        planning with
+                        my wife on what actually needs to be done since there was more to it than just magic, I began to
+                        put together
+                        a scrum type management tool for your household. We THINK it will work for us, give it a try and
+                        see if it
+                        works for you.
+                    </p>
+                    <br>
+                </md-content>
+            </div>
+        </div>
+    </div>
+    <section class="section4 insetShad" style="background-color: #eeeeee;">
+        <div class="row" style="width: 100%">
+            <div class="col-md-4">
+                <div class="card card-container boxShad" style="border-radius: 6px">
+                    <img id="profile-img" class="profile-img-card boxShad" src="../../images/bonding.png"/>
+                    <br>
+                    <p id="profile-name" class="profile-name-card">
+                        Promote family bonding with weekly household scrum meetings to plan tasks.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-container boxShad" style="border-radius: 6px; background-color: #a5a5a5">
+                    <img id="profile-img" class="profile-img-card boxShad" style="background-color: #EEEEEE"
+                         src="../../images/Communication.png"/>
+                    <br>
+                    <p id="profile-name" class="profile-name-card" style="color: black">
+                        Get your kids, and yourselves, away from electronics and communicate with each other.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-container boxShad" style="border-radius: 6px">
+                    <img id="profile-img" class="profile-img-card boxShad" src="../../images/Accountability.jpg"/>
+                    <br>
+                    <p id="profile-name" class="profile-name-card">
+                        Instill accountability in each family member for tasks they are responsible for.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sectCustom" style="margin-bottom: 0">
+        <div class="row" style="margin: 0">
+            <div class="col-md-4">
+                <p style="color:azure; line-height: 100px; font-size: 35px; text-align: right">Questions Or
+                    Comments?</p>
+            </div>
+            <div class="col-md-4">
+                <div class="button-holder">
+                    <md-button class="customBtnPrimary-lg myButton" type="button" data-toggle="modal"
+                               data-target="#contactModal"
+                               style="font-size: x-large;text-align: center">Contact Me
+                    </md-button>
+                </div>
+            </div>
+            <div class="col-md-4" style="padding-right: 0">
+                <div class="parallax" style="width: 100%"></div>
+            </div>
+        </div>
+    </section>
+    <section class="section5" style="background-color: #a5a5a5">
+        <div role="tabpanel">
+            <ul class="nav nav-tabs nav-justified primary-tab-nav" style="background-color: #eeeeee" role="tablist">
+                <li role="presentation" class="active">
+                    <a href aria-controls="TrainingTools" role="tab" data-toggle="tab" data-target="#TrainingTools">Helpful
+                        Recources</a>
+                </li>
+                <li role="presentation">
+                    <a href aria-controls="RequestTrainer" role="tab" data-toggle="tab" data-target="#RequestTrainer">Tab
+                        Heading Two</a>
+                </li>
+            </ul>
+            <div class="tab-content" style="background-color: #a5a5a5; height: 650px">
+                <div role="tabpanel" class="tab-pane active" id="TrainingTools">
+                    <div class="space-down-30" style="height: 30px"></div>
+                    <div class="container">
+                        <h1 style="text-align: center; font-size: large; color:black">Site Content</h1>
+                        <div class="space-down-30" style="height: 30px"></div>
+                        <div class="col-md-8">
+                            Here you will find a small collection of code that I have written myself or examples that I
+                            enjoy using within my projects.
+                        </div>
+                        <div class="col-md-4">
+                            <button class="customBtnDanger" id="snippets" ng-click="addFlash()" type="button">Code
+                                Snippets
+                            </button>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="RequestTrainer">
+                    <div class="space-down-30" style="height: 30px"></div>
+                    <div class="container" ng-controller="DashboardCtrl">
+                        <table class="table table-bordered table-condensed table-hover" style="background-color: aliceblue">
+                            <thead>
+                            <tr>
+                                <th class="docTableHead" colspan="4">
+                                    Documents
+                                </th>
+                            </tr>
+                            <tr>
+                                <th class="sectionHead" colspan="4">
+                                    Resume
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="doc in docs">
+                                <td class="thOne">
+                                    <img src="{{doc.icon}}" title="PDF" width="35" height="35">
+                                </td>
+                                <td>
+                                    <p style="line-height: 38px; color: black">
+                                        {{doc.title}}
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="line-height: 38px; color: black">
+                                        {{doc.helper}}
+                                    </p>
+                                </td>
+                                <td class="thThree">
+                                    <a style="line-height: 38px" href="{{doc.link}}" target="_blank">View/Download</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <!-- =========================================================================== -->
+                            <tbody>
+                            <tr>
+                                <th class="sectionHead" colspan="4">
+                                    References
+                                </th>
+                            </tr>
+                            <tr ng-repeat="ref in refs">
+                                <td>
+                                    <img src="{{ref.icon}}" title="PDF" width="35" height="35">
+                                </td>
+                                <td>
+                                    <p style="line-height: 38px; color: black">
+                                        {{ref.title}}
+                                    </p>
+                                </td>
+                                <td>
+                                    <p style="line-height: 38px; color: black">
+                                        {{ref.helper}}
+                                    </p>
+                                </td>
+                                <td>
+                                    <a style="line-height: 38px" href="{{ref.link}}" target="_blank">View/Download</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section5 picBG">
+        <div class="section2">
+            <div class="container">
+                <table>
+                    <tr>
+                        something
+                    </tr>
+                    <tr ng-repeat="item in locations">
+                        <td>{{item.timestampMs}}</td>
+                    </tr>
+                </table>
+                <ul ng-repeat="item in locations">
+                    <li>
+                        {{item.timestampMs}}
+                    </li>
+                    <li>
+                        {{item.latitudeE7}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="section4">
+        <div id="map" style="padding: 0"></div>
+    </section>
+    <div class="container">
+        <div class="modal fade borderer animated zoomIn" id="contactModal" tabindex="-1" role="dialog"
+             aria-labelledby="contactModalLabel">
+            <div class="modal-dialog borderer" role="document">
+                <div class="modal-content borderer">
+                    <div class="modal-header custom-bg">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
+                                class="fa fa-close" style="color: azure"></i></button>
+                        <h4 class="modal-title" id="myModalTitle" style="color: azure">Contact Form</h4>
+                    </div>
+                    <div class="modal-body borderer">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-11 form-group">
+                                        <label class="control-label" for="firstName">First Name:</label><span
+                                            style="color: red; font-size: large">*</span>
+                                        <input class="form-control" type="text" id="firstName" placeholder="First Name"
+                                               required/>
+                                    </div>
+                                    <div class="col-md-11 form-group">
+                                        <label class="control-label" for="lastName">Last Name:</label><span
+                                            style="color: red; font-size: large">*</span>
+                                        <input class="form-control" type="text" id="lastName" placeholder="Last Name"
+                                               required/>
+                                    </div>
+                                    <div class="col-md-11 form-group">
+                                        <label class="control-label" for="returnEmail">Return Email:</label><span
+                                            style="color: red; font-size: large">*</span>
+                                        <input class="form-control" type="email" id="returnEmail"
+                                               placeholder="Return Email" required/>
+                                    </div>
+                                    <div class="col-md-11 form-group">
+                                        <label class="control-label" for="question">Question:</label>
+                                        <textarea class="form-control" maxlength="100" style="resize: none" rows="4"
+                                                  id="question" placeholder="Ask Your Question..." required></textarea>
+                                        <span class="help-block" id="text-spot"></span>
+                                        <br>
+                                        <span class="help-block">(Leave us your info and we will get back to you.)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <md-button type="button" class="customBtnDefault" data-dismiss="modal">Cancel</md-button>
+                        <md-button type="submit" class="customBtnPrimary">Submit</md-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var marker;
+    function initMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(42.972667, -85.677600),
+            zoom: 12,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        spireMarker();
+    }
+
+    function addMarker(location) {
+        marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+
+    function spireMarker() {
+        GrandRapids = new google.maps.LatLng(42.972667, -85.677600);
+        addMarker(GrandRapids)
+    }
+
+    $(window).on("load", function () {
+        $(window).scroll(function () {
+            var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+            $(".customFade").each(function () {
+                /* Check the location of each desired element */
+                var objectBottom = $(this).offset().top + $(this).outerHeight();
+                /* If the element is completely within bounds of the window, fade it in */
+                if (objectBottom < windowBottom) {
+                    if ($(this).css("opacity") == 0) {
+                        $(this).fadeTo(500, 1);
+                    } // object comes into view (scrolling down)
+                } else {
+                    if ($(this).css("opacity") == 1) {
+                        $(this).fadeTo(500, 0);
+                    } // object goes out of view (scrolling up)
+                }
+            });
+        }).scroll(); //invoke scroll-handler on page-load
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        var max = 100;
+        $('#text-spot').html(max + ' Characters Left!!!');
+
+        $('#question').keyup(function () {
+            var textLength = $('#question').val().length;
+            var textLeft = max - textLength;
+
+            $('#text-spot').html(textLeft + ' Characters Left!!!');
+        });
+        $('#contactPhone').mask('(999) 999-9999');
+    });
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiXPJs9Ms5pArwEUGph5X-Nln8ejjqM68&callback=initMap"></script>
+
+
+

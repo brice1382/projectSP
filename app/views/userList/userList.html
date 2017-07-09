@@ -1,0 +1,38 @@
+<div ng-if="!isAuthenticated">
+    <h1 style="text-align: center">You are not authenticated. <a href="#!/login">Login</a></h1>
+</div>
+<div ng-if="isAuthenticated">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1">
+                <div>
+                    <label for="input">Search:</label><br>
+                    <input id="input" ng-model="vm.query"/>
+                </div>
+                <br>
+                <div>
+                    <label>Sort by:</label><br>
+                    <select ng-model="vm.orderProp">
+                        <option value="username">Alphabetical</option>
+                        <option value="userId">Newest</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <ul class="phones" style="height: auto">
+                    <li style="height: 115px" ng-repeat="user in vm.users | filter:vm.query | orderBy:vm.orderProp"
+                        class="thumbnail">
+                        <a style="margin: 3px 20px auto 0" href="#!/users/{{user.id}}" class="thumb">
+                            <img style="" ng-src="{{user.imageUrl}}" alt="{{user.username}}"/>
+                        </a>
+                        <a href="#!/users/{{user.id}}">{{user.username}}</a>
+                        <hr style="border: 1px solid black; margin: 5px 0 5px 0; width: 200px">
+                        <p style="color: black">{{user.email}}</p>
+                        <p style="color: black">{{user.snippet}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+</div>

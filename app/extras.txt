@@ -1,0 +1,131 @@
+
+<div class="form-group">
+                <div class="col-md-8 col-md-offset-2">
+                    <p id="myRandText">The random numbers are: </p>
+                    <button class="form-control btn btn-danger btn-sm" type="button" onClick='genRandomNumbers()'>Generate</button>
+                </div>
+            </div>
+
+genRandomNumbers = function getRandomNumbers() {
+        var array = new Uint32Array(3);
+        window.crypto.getRandomValues(array);
+
+        var user = localStorage.getItem('user');
+        var test = btoa(user);
+        var randText = document.getElementById("myRandText");
+        randText.innerHTML = "The random numbers are: ";
+        for (var i = 0; i < array.length; i++) {
+            randText.innerHTML += array[i] + "-" + test + " ";
+        }
+    };
+
+
+    function getUser() {
+            $.ajax({
+                type: 'GET',
+                url: '/api/v2/contact',
+                'headers': {
+                    'Access-Control-Allow-Origin':  '*',
+                    'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE',
+                    'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+                }
+            }).done(function (data) {
+                this.result(data);
+            }).fail();
+        }
+
+==============================================================
+Simple working ajax call for mysql
+==============================================================
+
+==============================================================
+html from the view
+==============================================================
+
+<div class="container" style="width: 35%; background-color: #a5b0b4; border-radius: 6px">
+    <br>
+    <h1 style="text-align: center">Testing Form</h1>
+    <hr>
+    <form name="testForm">
+        <div class="form-group">
+            <label class="control-label" for="name2">Name:</label>
+            <input class="form-control" id="name2" type="text" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="location">Location:</label>
+            <input class="form-control" id="location" type="text" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="test"></label>
+            <button class="btn btn-primary form-control" id="test" type="button" onclick="test()">Testing Click</button>
+        </div>
+        <br>
+    </form>
+</div>
+
+==============================================================
+client side javascript
+==============================================================
+
+function test() {
+        var name = document.getElementById('name2').value;
+        var location = document.getElementById('location').value;
+        var url = "http://localhost:1313/api/v1/contact";
+        var payload = {
+            name: name,
+            location: location
+        };
+        debugger;
+        var settings = {
+            'method': 'POST',
+            'data': payload,
+            'url': url
+        };
+        debugger;
+        $.ajax(settings).done(function(res){
+            if(res.status === "ok"){
+                swal('Successful')
+            }
+        })
+    }
+
+==============================================================
+    server side post
+==============================================================
+app.post('/api/v1/contact', function(req, res){
+    var values = {
+        name: req.body.name,
+        location: req.body.location
+    };
+    con.query("INSERT INTO Users2 SET ?", values, function(err, res){
+        if(err) throw err;
+        console.log('Last insert ID:', res.insertId);
+    });
+    res.json( { "status": "ok" } );
+});
+
+==============================================================
+setting and retrieving cookies
+==============================================================
+<!--<a class="btn btn-danger" type="button" onclick="setCookie('myCookie', base, exp)">Set A Cookie</a>-->
+<!--<a class="btn btn-danger" type="button" onclick="delCookie('myCookie')">Delete Cookie</a>-->
+<!--<input type="button" value="Get Cookie Value" onClick="this.form.tf.value = getCookie('myCookie')">-->
+<!--<input type="text" name="tf" size="30">-->
+
+
+==============================================================
+bad ass price table.  SAVE IMPORTANT
+==============================================================
+<div class="container" style="height: 100%">
+   <div ng-include="'views/layout/pricing/pricing-tpl.html'"></div>
+</div>
+
+
+<!--<link href="dist/mainStyle.css" rel="stylesheet">-->
+  <!--<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">-->
+  <!--<link href="bower_components/angular-material/angular-material.css" rel="stylesheet">-->
+  <!--<link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">-->
+  <!--<link href="views/layout/pricing/pricing-style.css" rel="stylesheet">-->
+  <!--<link href="bower_components/animate.css/animate.css" rel="stylesheet">-->
+  <!--<link href="user.animation.css" rel="stylesheet">-->
+  <!--<link href="bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">-->

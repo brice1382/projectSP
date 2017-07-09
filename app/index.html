@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProjectSP</title>
+  <link href="app.css" rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link href="styles/main.css" rel="stylesheet">
+  <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <link href="bower_components/angular-material/angular-material.css" rel="stylesheet">
+  <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="views/layout/pricing/pricing-style.css" rel="stylesheet">
+  <link href="bower_components/animate.css/animate.css" rel="stylesheet">
+  <link href="user.animation.css" rel="stylesheet">
+  <link href="bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="components/js/parallax.js"></script>
+  <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.1/clipboard.min.js"></script>
+
+  <style type="text/css">
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .slider {
+      width: 50%;
+      margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+  </style>
+
+
+
+</head>
+<body ng-cloak>
+
+  <div ng-include="'views/navbar/navbar-tpl.html'"></div>
+
+
+  <div ng-view></div>
+
+  <div class="alert alert-{{alert.type}} animated main-alert" ng-class="{'flipInY': alert.show, 'flipOutY': !alert.show, 'alert-hidden': !alert.hasBeenShown}"><strong>{{alert.title}}</strong> {{alert.message}}</div>
+
+  <div ng-include="'views/layout/footer/footer-tpl.html'"></div>
+
+
+  <a id="myBtn" title="Go to top">Top</a>
+  <script>
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              document.getElementById("myBtn").style.display = "block";
+          } else {
+              document.getElementById("myBtn").style.display = "none";
+          }
+      }
+
+      // When the user clicks on the button,  scroll to the top of the document
+//      function topFunction() {
+//          document.body.scrollTop = 0; // For Chrome, Safari and Opera
+//          document.documentElement.scrollTop = 0; // For IE and Firefox
+//      }
+  </script>
+  <script>
+    $(document).ready(function () {
+        $('#myBtn').on('click', function(){
+            $('html, body').animate({scrollTop:0}, 'slow');
+        });
+    });
+  </script>
+  <script type="text/javascript" src="variables.js"></script>
+  <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/auth0-lock/build/lock.js"></script>
+  <script type="text/javascript" src="bower_components/angular-lock/dist/angular-lock.js"></script>
+  <script type="text/javascript" src="bower_components/auth0.js/build/auth0.js"></script>
+  <script type="text/javascript" src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+  <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+  <script type="text/javascript" src="bower_components/angular-material/angular-material.js"></script>
+  <script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+  <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+  <script type="text/javascript" src="bower_components/angular-aria/angular-aria.js"></script>
+  <script type="text/javascript" src="bower_components/sp-manager/dist/sp-manager.js"></script>
+  <script type="text/javascript" src="components/toast/toastCtrl.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="app.run.js"></script>
+  <script type="text/javascript" src="views/home/homeCtrl.js"></script>
+  <script type="text/javascript" src="views/contact/_module.js"></script>
+  <script type="text/javascript" src="views/contact/contactCtrl.js"></script>
+  <script type="text/javascript" src="views/contact/contactSvc.js"></script>
+  <script type="text/javascript" src="views/login/_module.js"></script>
+  <script type="text/javascript" src="views/login/loginCtrl.js"></script>
+  <script type="text/javascript" src="views/login/forgotPassword/forgotPasswordCtrl.js"></script>
+  <script type="text/javascript" src="views/layout/_module.js"></script>
+  <script type="text/javascript" src="views/navbar/_module.js"></script>
+  <script type="text/javascript" src="views/navbar/navbarCtrl.js"></script>
+  <script type="text/javascript" src="views/layout/footer/footerCtrl.js"></script>
+  <script type="text/javascript" src="views/auth/authService.js"></script>
+  <script type="text/javascript" src="views/dashboard/dashboardCtrl.js"></script>
+  <script type="text/javascript" src="views/dashboard/goals/goals-core/_module.js"></script>
+  <script type="text/javascript" src="views/dashboard/goals/goals-core/goal-service/_module.js"></script>
+  <script type="text/javascript" src="views/dashboard/goals/goals-core/goal-service/goal-service.js"></script>
+  <script type="text/javascript" src="views/dashboard/goals/goal-detailsCtrl.js"></script>
+  <script type="text/javascript" src="views/contact/contactCtrl.js"></script>
+  <script type="text/javascript" src="views/register/registerCtrl.js"></script>
+  <script type="text/javascript" src="views/register/services/alert.js"></script>
+  <script type="text/javascript" src="views/userDetails/userDetailsCtrl.js"></script>
+  <script type="text/javascript" src="views/userList/_module.js"></script>
+  <script type="text/javascript" src="views/userList/user-core/user/_module.js"></script>
+  <script type="text/javascript" src="views/userList/user-core/_module.js"></script>
+  <script type="text/javascript" src="views/userList/user-core/user/user-service.js"></script>
+  <script type="text/javascript" src="views/userList/controllers/usersCtrl.js"></script>
+  <script type="text/javascript" src="views/list/listCtrl.js"></script>
+  <script type="text/javascript" src="js/deps.js"></script>
+  <script type="text/javascript" src="playground/_module.js"></script>
+  <script type="text/javascript" src="playground/playgroundCtrl.js"></script>
+  <script type="text/javascript" src="views/list/services/tdService.js"></script>
+  <script type="text/javascript" src="views/cleaningList/_module.js"></script>
+  <script type="text/javascript" src="views/cleaningList/cleaning-core/_module.js"></script>
+  <script type="text/javascript" src="views/cleaningList/cleaning-core/list/_module.js"></script>
+  <script type="text/javascript" src="views/cleaningList/services/listService.js"></script>
+  <script type="text/javascript" src="views/cleaningList/controllers/cleaningListCtrl.js"></script>
+  <script type="text/javascript" src="views/cleaningList/cleaning-core/_module.js"></script>
+  <script type="text/javascript" src="views/cleaningList/cleaning-core/list/list-service.js"></script>
+  <script type="text/javascript" src="views/cleaningDetails/cleaningDetailsCtrl.js"></script>
+
+
+  <!--<script type="text/javascript" src="build/manage_all.js"></script>-->
+  <!--<script type="text/javascript" src="views/manage/dashboard/projectsCtrl.js"></script>-->
+  <!--<script type="text/javascript" src="views/manage/ManageCtrl.js"></script>-->
+  <script type="text/javascript" src="views/uploader/upload.js"></script>
+  <script type="text/javascript" src="views/uploader/uploadCtrl.js"></script>
+  <script type="text/javascript" src="components/js/formFieldVal.js"></script>
+  <script type="text/javascript" src="components/version/version.js"></script>
+  <script type="text/javascript" src="components/version/version-directive.js"></script>
+  <script type="text/javascript" src="components/version/interpolate-filter.js"></script>
+
+</body>
+</html>

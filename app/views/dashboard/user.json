@@ -1,0 +1,53 @@
+{
+  "username": {
+    "brice721": [
+      {
+        "userId": 1,
+        "name": "Brandon Rice",
+        "password": "betabee13",
+        "email": "brice721@hotmail.com"
+      }
+    ],
+    "lyfling83": [
+      {
+        "userId": 2,
+        "name": "Sarah Wise",
+        "password": "andrew22900",
+        "email": "lyfling83@gmail.com"
+      }
+    ],
+    "afyan13": [
+      {
+        "userId": 3,
+        "name": "Avin Fyan",
+        "password": "canis_lupus13",
+        "email": "afyan@att.net"
+      }
+    ],
+    "adrian123": [
+      {
+        "userId": 4,
+        "name": "Adrian Pavelescu",
+        "password": "wizard1234",
+        "email": "afyan@att.net"
+      }
+    ],
+    "momma55": [
+      {
+        "userId": 5,
+        "name": "Faye Johnson",
+        "password": "sctooer1234",
+        "email": "belmor5827@yahoo.com"
+      }
+    ],
+    "billsonTheBeatSlayer": [
+      {
+        "userId": 6,
+        "name": "Bill Poulson",
+        "password": "Isuckatangular1234",
+        "email": "bill.poulson@montagefs.com"
+      }
+    ]
+  }
+}
+

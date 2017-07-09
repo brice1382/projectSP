@@ -1,0 +1,48 @@
+<div class="modal fade borderer animated zoomIn" id="csharpApiCtrlModal" tabindex="-1" role="dialog"
+     aria-labelledby="contactModalLabel">
+    <div class="modal-dialog borderer" role="document">
+        <div class="modal-content borderer">
+            <div class="modal-header custom-bg">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
+                        class="fa fa-close" style="color: azure"></i></button>
+                <h4 class="modal-title" id="myModalTitle" style="color: azure">C-Sharp API Controller</h4>
+            </div>
+            <div class="modal-body borderer" style="height: auto">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            [<span class="snipCSNameS">Authenticate</span>]
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="snipCSClass">public class</span> <span class="snipCSNameS">UsersController</span> : <span class="snipCSNameS">ApiController</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            {
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tbody ng-include="'views/layout/code-snippets/c-sharp/cSharpApiCtrl/getAll.html'"></tbody>
+                    <tbody ng-include="'views/layout/code-snippets/c-sharp/cSharpApiCtrl/get.html'"></tbody>
+                    <tbody ng-include="'views/layout/code-snippets/c-sharp/cSharpApiCtrl/post.html'"></tbody>
+                    <tbody ng-include="'views/layout/code-snippets/c-sharp/cSharpApiCtrl/put.html'"></tbody>
+                    <tbody ng-include="'views/layout/code-snippets/c-sharp/cSharpApiCtrl/delete.html'"></tbody>
+                    <tbody>
+                    <tr>
+                        <td>
+                            }
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <md-button style="font-weight: bold" type="button" class="customBtnDefault" data-dismiss="modal">Close <i class="fa fa-times"></i></md-button>
+            </div>
+        </div>
+    </div>
+</div>

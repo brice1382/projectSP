@@ -1,0 +1,32 @@
+<div ng-if="!isAuthenticated">
+    <h1 style="text-align: center">You are not authenticated. <a href="#!/login">Login</a></h1>
+</div>
+<div ng-if="isAuthenticated">
+    <div class="col-md-6" ng-controller="GoalDetailsCtrl as vm">
+        <div class="container goal-images" style="background: none; width: 100%">
+            <img class="user" style="background: none; height: 250px; width: 250px" ng-src="{{img}}"
+                 ng-class="{selected: img === DbdCtrl.mainImageUrl}"
+                 ng-repeat="img in vm.goals.images">
+        </div>
+        <div class="" style="margin-left: 50px">
+            <a type="button" style="font-size: 35px; font-weight: bold; color: black" href="javascript:history.back();">
+                <i class="fa fa-arrow-left"> </i>BACK</a>
+        </div>
+    </div>
+
+    <div class="col-md-6" ng-controller="GoalDetailsCtrl as vm">
+        <div class="container" style="width: 100%">
+            <h1 style="font-size: 30px; color: black; font-weight: bold">Goal Info</h1>
+            <hr style="padding: 0; width: 50%; border: 1px solid black; margin: 5px 0 15px 0">
+            <h1 style="color: black; font-weight: bold">Description:</h1>
+            <h1 style="color: black; line-height: 30px">{{vm.goals.description}}</h1>
+            <br>
+            <h1 style="color: black; font-weight: bold">Email:</h1>
+            <h1 style="color: black; line-height: 30px">{{vm.goals.email}}</h1>
+            <br>
+            <h1 style="color: black; font-weight: bold">Company:</h1>
+            <!--<h1 style="color: black; line-height: 30px">{{DbdCtrl.user.company}}</h1>-->
+            <div style="height: 100px"></div>
+        </div>
+    </div>
+</div>

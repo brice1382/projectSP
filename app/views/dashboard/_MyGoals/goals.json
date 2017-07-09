@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "goalId": "modile-dev",
+    "title": "Mobile Development",
+    "snippet": "Cross platform and IoT Development"
+  },
+  {
+    "id": 2,
+    "goalId": "mentor-younger-devs",
+    "title": "Mentor Young Developers",
+    "snippet": "Established and Knowledgeable to be a great Mentor"
+  },
+  {
+    "id": 3,
+    "goalId": "positive-impact",
+    "title": "Impact My Community Positively",
+    "snippet": "Help my community in a positive way with my knowledge of development"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "listId": "bathroom",
+    "listName": "Bathroom",
+    "id": 1,
+    "imageUrl": "images/spire.png",
+    "snippet": "Helpful starter list for keeping on top of the bathroom."
+  },
+  {
+    "listId": "house",
+    "listName": "House",
+    "id": 2,
+    "imageUrl": "images/spire.png",
+    "snippet": "Get in a clear routine for all purpose house cleaning."
+  },
+  {
+    "listId": "kitchen",
+    "listName": "Kitchen",
+    "id": 3,
+    "imageUrl": "images/spire.png",
+    "snippet": "Dont let spills and dishes bury you. Use this list to stay ahead of the mess."
+  },
+  {
+    "listId": "roducts",
+    "listName": "Products",
+    "id": 4,
+    "imageUrl": "images/spire.png",
+    "snippet": "Plan your work and work your plan with this starter list of cleaning products and equipment."
+  }
+]

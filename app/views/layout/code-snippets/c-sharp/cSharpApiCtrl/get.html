@@ -1,0 +1,34 @@
+    <br>
+    <tr>
+        <td>
+            <span style="margin-left: 20px" class="snipCSComment">// GET: api/Users/13</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <!--<span class="snipCSNameS">JsonResult</span>-->
+            <span style="margin-left: 20px" class="snipCSClass">public</span>
+            <span class="snipCSNameS">JsonResult</span><<span class="snipCSNameS">UserModel</span>> Get(<span class="snipCSClass">int </span>Id)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 20px">{</span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 40px" class="snipCSClass">var </span>userSvc = <span class="snipCSNameS">UserLocator</span>.GetUserService();
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 40px" class="snipCSClass">return </span>Json(userSvc.GetUser(Id));
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <span style="margin-left: 20px">}</span>
+        </td>
+    </tr>
+

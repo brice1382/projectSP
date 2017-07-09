@@ -1,0 +1,51 @@
+<tr>
+    <td>
+        <span style="margin-left: 20px" class="snipCSClass">public static </span><span class="snipCSNameS">UserDbContext</span> _userDbContext = <span class="snipCSClass">null</span>;
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 20px" class="snipCSClass">public static </span><span class="snipCSNameS">UserDbContext</span> GetUserDbContext()
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 20px">{</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 40px" class="snipCSClass">if </span>(<span class="snipCSNameS">UserLocator</span>._userDbContext == <span class="snipCSClass">null</span>)
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 40px">{</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 60px" class="snipCSNameS">UserLocator</span>._userDbContext = <span class="snipCSClass">new </span><span class="snipCSNameS">UserDbContext</span>();
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 40px">}</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 40px" class="snipCSClass">return </span><span class="snipCSNameS">UserLocator</span>._userDbContext;
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 20px">}</span>
+    </td>
+</tr>
+<tr ng-include="'views/layout/code-snippets/c-sharp/br-tpl.html'"></tr>
+<tr>
+    <td>
+        <span style="margin-left: 20px" class="snipCSClass">private static </span><span class="snipCSDAO">IMapper</span> _mapperConfig;
+    </td>
+</tr>

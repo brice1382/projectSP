@@ -1,0 +1,47 @@
+<div class="modal fade borderer animated zoomIn" id="angularCtrlModal" tabindex="-1" role="dialog"
+     aria-labelledby="contactModalLabel">
+    <div class="modal-dialog borderer" role="document">
+        <div class="modal-content borderer">
+            <div class="modal-header custom-bg">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i
+                        class="fa fa-close" style="color: azure"></i></button>
+                <h4 class="modal-title" id="myModalTitle" style="color: azure">AngularJS Code Snippet</h4>
+            </div>
+            <div class="modal-body borderer" style="height: 400px">
+                <code id="shit" ng-model="ngcpy" style="line-height: normal">
+                    (function() {<br>
+                    &nbsp;&nbsp;'use strict';<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;angular<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.module('${yourModel}')<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.controller('${YourController}', ${YourController});<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${YourController}.$inject = ['${YourDependencies}'];<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* @ngInject */<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function ${YourController}(${YourDependencies}){<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var vm = this;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vm.${YourProperty} = '${YourController}';<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${5:}<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;activate();<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;function activate() {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                    })();<br>
+                </code>
+            </div>
+            <div class="modal-footer">
+                <md-button style="font-weight: bold" type="button" class="customBtnDefault" data-dismiss="modal">Close <i class="fa fa-times"></i></md-button>
+                <md-button style="font-weight: bold" data-clipboaard-text="{{ngcpy}}" type="button" title="Copy To Clipboard" class="customBtnInfo">Copy <i class="fa fa-clipboard"></i></md-button>
+                <a id="ngCtrl" data-clipboaard-text="shit">Copy <i class="fa fa-clipboard"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var text = document.getElementById('shit').innerText;
+    var clipboard = new Clipboard(text);
+    clipboard.on('success', function (e) {
+        console.log(e);
+    });
+    clipboard.on('error', function (e) {
+        console.log(e);
+    });
+</script>

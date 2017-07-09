@@ -1,0 +1,47 @@
+<!--<div ng-if="!isAuthenticated">-->
+    <!--<h1 style="text-align: center">You are not authenticated. <a href="#!/login">Login</a></h1>-->
+<!--</div>-->
+<!--<div ng-if="isAuthenticated">-->
+    <div class="container" style="background-color: #e3e3db; border-radius: 6px; width: 50%">
+    <h1 style="text-align: center; padding-top: 20px" ng-model="title">{{ title }}</h1>
+        <br>
+        <form class="animated fadeIn">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group col-md-8 col-md-offset-2">
+                        <label class="control-label">File Name: </label>
+                        <input id="selectFiles" value="Import" type="file" accept="application/json"
+                               style="cursor: pointer" class="form-control">
+                        <br>
+                        <md-button id="import" class="md-raised customBtnSuccess" type="submit" onclick="sonUpload()">
+                            Submit <i class="fa fa-check"></i></md-button>
+                    </div>
+                    <br>
+                    <div class="form-group col-md-8 col-md-offset-2">
+                        <label class="control-label">Results: </label>
+                        <textarea class="form-control uploadForm" id="searches"></textarea>
+                        <br>
+                        <md-button class="md-raised pull-left customBtnPrimary-lg" type="button"
+                                   onclick="javascript:location.reload()">Reload Page <i class="fa fa-refresh"></i>
+                        </md-button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="spacer30"></div>
+    <div class="parallax" style="height: 350px">
+        <div class="container">
+            <button ng-click="testButton()" type="button" class="btn btn-danger">CLICK ME</button>
+            <br>
+            <br>
+            Password: <input type="text" ng-model="password" title="password">
+            <button ng-click="guid()" type="button" class="btn btn-danger">LOGIN</button>
+            <button ng-click="clear()" type="button" class="btn btn-danger">Clear</button>
+        </div>
+    </div>
+    <div class="spacer30"></div>
+    <div class="spacer30"></div>
+<!--</div>-->
+<div class="space-down-50"></div>
+<div class="space-down-50"></div>

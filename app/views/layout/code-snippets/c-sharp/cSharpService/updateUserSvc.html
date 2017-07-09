@@ -1,0 +1,26 @@
+<br>
+<tr>
+    <td>
+        <span style="margin-left: 20px" class="snipCSClass">public void </span>UpdateUser(<span class="snipCSNameS">UserModel</span> model)
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 20px">{</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 40px" class="snipCSNameS">UserEntity</span> newUser = <span class="snipCSNameS">UserLocator</span>.Mapper.Map<<span class="snipCSNameS">UserEntity</span>>(model);
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 40px" class="snipCSClass">this</span>._userDAO.UpdateUser(newUser);
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 20px">}</span>
+    </td>
+</tr>

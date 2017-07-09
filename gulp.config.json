@@ -1,0 +1,115 @@
+{
+  "client": "./app",
+  "server": "./server",
+  "api": "/api",
+  "html": "./app/**/*.html",
+  "vendorJS": [
+    "./app/bower_components/jquery/dist/jquery.min.js",
+    "./app/bower_components/angular/angular.min.js",
+    "./app/bower_components/angular-animate/angular-animate.min.js",
+    "./app/bower_components/angular-route/angular-route.min.js",
+    "./app/bower_components/bootstrap/dist/js/bootstrap.min.js"
+  ],
+  "vendorcss": [
+    "./app/bower_components/bootstrap/dist/css/bootstrap.min.css",
+    "./app/bower_components/font-awesome/css/font-awesome.min.css",
+    "./app/bower_components/animate.css/animate.min.css"
+  ],
+  "css": [
+    "./app/app.css"
+  ],
+  "js": [
+    "./app/views/**/*module*.js",
+    "./app/views/**/*.js",
+    "!./app/bower_components/**/*.js"
+  ],
+  "nodejs": [
+    "./server/**/*.js"
+  ],
+  "fonts": [
+    "./app/bower_components/font-awesome/fonts/**/*.*"
+  ],
+  "images": [
+    "./app/images/**/*"
+  ],
+  "allJS": [
+    "./app/views/_module.js",
+    "./app/views/home/homeCtrl.js",
+    "./app/views/contact/contactCtrl.js",
+    "./app/views/contact/contactSvc.js",
+    "./app/views/login/_module.js",
+    "./app/views/login/loginCtrl.js",
+    "./app/views/login/forgotPassword/forgotPasswordCtrl",
+    "./app/views/register/registerCtrl.js",
+    "./app/views/register/services/alert.js",
+    "./app/views/users/_module.js",
+    "./app/views/users/controllers/usersCtrl.js",
+    "./app/views/users/services/usersSvc.js",
+    "./app/views/uploader/uploadCtrl.js"
+  ],
+  "views": [
+    "./app/views/_module.js"
+  ],
+  "auth": [
+    {"authService": "./app/views/auth/authService"}
+  ],
+  "cleaningDetails": [
+    {"controllers": "./app/views/cleaningDetails/cleaningDetailsCtrl.js"}
+  ],
+  "cleaningList": [
+    "./app/views/cleaningList/_module.js",
+    "./app/views/cleaningList/cleaning-core/_module.js",
+    "./app/views/cleaningList/cleaning-core/list/_module.js",
+    "./app/views/cleaningList/cleaning-core//list/list-service.js",
+    "./app/views/cleaningList/controllers/cleaningListCtrl.js"
+  ],
+  "contact": [
+    "./app/views/contact/_module.js",
+    "./app/views/contact/contactCtrl.js",
+    "./app/views/contact/contactSvc.js"
+  ],
+  "dashboard": [
+    "./app/views/dashboard/dashboardCtrl.js"
+  ],
+  "home": [
+    "./app/views/home/*.js"
+  ],
+  "layout": [
+    "./app/views/layout/_module.js",
+    "./app/views/layout/footer/_module.js",
+    "./app/views/layout/footer/footerCtrl"
+  ],
+  "list": [
+    "./app/views/list/listCtrl.js",
+    "./app/views/list/services/tdService.js"
+  ],
+  "login": [
+    "./app/views/login/_module.js",
+    "./app/views/login/loginCtrl.js"
+  ],
+  "navbar": [
+    "./app/views/navbar/_module.js",
+    "./app/views/navbar/navbarCtrl.js"
+  ],
+  "register": [
+    "./app/views/register/registerCtrl.js"
+  ],
+  "uploader": [
+    "./app/views/uploader/upload.js",
+    "./app/views/uploader/uploadCtrl.js"
+  ],
+  "userDetails": [
+    "./app/views/userDetails/userDetailsCtrl.js"
+  ],
+  "userList": [
+    "./app/views/userList/_module.js",
+    "./app/views/userList/user-core/_module.js",
+    "./app/views/userList/user-core/user/_module.js",
+    "./app/views/userList/user-core/user/user-service.js",
+    "./app/views/userList/services/userSvc.js",
+    "./app/views/userList/controllers/userCtrl.js"
+  ],
+  "build": "./build/",
+  "temp": "./temp",
+  "buildImg": "./build/images/"
+}

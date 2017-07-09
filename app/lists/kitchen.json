@@ -1,0 +1,53 @@
+{
+  "listId": 3,
+  "id": "kitchen",
+  "area": "Kitchen",
+  "snippet": "Dont let spills and dishes bury you. Use this list to stay ahead of the mess.",
+  "images": [
+    "images/spire.png"
+  ],
+  "schedule": [
+    {
+      "Category": "Daily Tasks",
+      "listItems": [
+        "Clean up dishes, pots and pans after each meal",
+        "Run dishwasher as needed (and empty when clean)",
+        "Wipe down kitchen counters, table and stove top",
+        "Empty trash can",
+        "Sweep floor",
+        "Change out kitchen towels",
+        "Wipe up spills as they occur"
+      ]
+    },
+    {
+      "Category": "Weekly Tasks",
+      "listItems": [
+        "Clean out refrigerator and freezer of older food",
+        "Mop kitchen floor",
+        "Check cleaning supplies, and restock as necessary",
+        "Flush kitchen drain with boiling water",
+        "Disinfect kitchen counters and other food work surfaces",
+        "Take out recycling"
+      ]
+    },
+    {
+      "Category": "Monthly Tasks",
+      "listItems": [
+        "Clean coffee maker",
+        "Clean dishwasher, inside and out",
+        "Clean oven (may need to do less often, depending on the amount of use)",
+        "Clean kitchen sink drain with vinegar and baking soda drain cleaner",
+        "Clean inside of refrigerator",
+        "Clean garbage can",
+        "Clean microwave",
+        "Wipe outside of kitchen appliances",
+        "Wipe down areas that accumulate cooking grease with a degreaser",
+        "Wash kitchen rugs",
+        "Dust light fixtures",
+        "Make sure pest control methods working and are properly supplied",
+        "Update pantry and freezer inventories",
+        "Straighten cabinets and drawers"
+      ]
+    }
+  ]
+}

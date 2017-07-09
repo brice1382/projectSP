@@ -1,0 +1,51 @@
+{
+  "listId": 4,
+  "id": "products",
+  "area": "Helpful Product List",
+  "snippet": "Plan your work and work your plan with this starter list of cleaning products and equipment.",
+  "images": [
+    "images/spire.png"
+  ],
+  "products": [
+    {
+      "prodId": 1,
+      "equipmentList": [
+        {"id":  1, "value": "Dust mop"},
+        {"id":  2, "value": "Dust cloths and dusters"},
+        {"id":  3, "value": "Rags, towels and soft cloths"},
+        {"id":  4, "value": "Indoor broom"},
+        {"id":  5, "value": "Outdoor broom"},
+        {"id":  6, "value": "Vacuum"},
+        {"id":  7, "value": "Wet mop"},
+        {"id":  8, "value": "Toilet brush (and brush caddy)"},
+        {"id":  9, "value": "Plunger"},
+        {"id": 10, "value": "Spray bottles"},
+        {"id": 11, "value": "Squirt bottles"},
+        {"id": 12, "value": "Sponges"},
+        {"id": 13, "value": "Scrub brush"},
+        {"id": 14, "value": "Scraper"},
+        {"id": 15, "value": "Toothbrush"},
+        {"id": 16, "value": "Buckets"},
+        {"id": 17, "value": "Rubber gloves"},
+        {"id": 18, "value": "Cleaning apron"},
+        {"id": 19, "value": "Cleaning caddy"}
+      ]
+    },
+    {
+      "cleanerList": [
+        {"id": 20, "value": "All-purpose cleaner"},
+        {"id": 21, "value": "Disinfectant cleaner"},
+        {"id": 22, "value": "Glass cleaner"},
+        {"id": 23, "value": "Abrasive cleaners of varying intensity (including a mild abrasive cleaner)"},
+        {"id": 24, "value": "Mild detergent"},
+        {"id": 25, "value": "Household ammonia"},
+        {"id": 26, "value": "White vinegar"},
+        {"id": 27, "value": "Baking soda"},
+        {"id": 28, "value": "Chlorine bleach"},
+        {"id": 29, "value": "Metal polishes (including for silver, copper, brass, chrome, stainless steel, and aluminum)"},
+        {"id": 30, "value": "Furniture polishes"},
+        {"id": 31, "value": "Spot carpet cleaner"}
+      ]
+    }
+  ]
+}

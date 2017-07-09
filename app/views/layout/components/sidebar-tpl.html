@@ -1,0 +1,189 @@
+<div class="col-md-2 sidebar">
+    <div class="row">
+        <div class="absolute-wrapper"></div>
+        <div class="side-menu">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="side-menu-container">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href class="black">
+                                <i class="fa fa-dashboard"></i>
+                                Need Topic For This
+                            </a>
+                        </li>
+                        <li ng-if="isFlashy" class="panel panel-default" id="dropdown1">
+                            <a class="animated flash" id="snips" data-toggle="collapse" style="cursor: pointer"
+                               data-target="#dropdown-lvl1">
+                                <i class="fa fa-code"></i> Code Snippets <i class="fa fa-caret-down"></i>
+                            </a>
+                            <div id="dropdown-lvl1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <li>
+                                            <a href data-toggle="modal" data-target="#jsModal">
+                                                JavaScript
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="collapse" style="cursor: pointer"
+                                               data-target="#dropdown-csharp">
+                                                C Sharp <i class="fa fa-caret-down"></i>
+                                            </a>
+                                            <div id="dropdown-csharp" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="nav navbar-nav">
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpCtrlModal">Controller
+                                                                <p class="help-block">(Home Controller)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpApiCtrlModal">ApiController
+                                                                <p class="help-block">(User API)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpDAOModal">DAO
+                                                                <p class="help-block">(Data Access Object)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpServiceModal">Service
+                                                                <p class="help-block">(User Service)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpModelModal">Model
+                                                                <p class="help-block">(User Model)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpEntityModal">Entity
+                                                                <p class="help-block">(User Entity)</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="collapse" style="cursor: pointer"
+                                               data-target="#dropdown-angular">
+                                                AngularJS <i class="fa fa-caret-down"></i>
+                                            </a>
+                                            <div id="dropdown-angular" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="nav navbar-nav">
+                                                        <li><a href data-toggle="modal" data-target="#angularCtrlModal">Controller</a>
+                                                        </li>
+                                                        <li><a href data-toggle="modal"
+                                                               data-target="#angularDirectiveModal">Directive</a></li>
+                                                        <li><a href data-toggle="modal" data-target="#angularServiceModal">Service</a>
+                                                        </li>
+                                                        <li><a href>Service</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li ng-if="!isFlashy" class="panel panel-default" id="dropdown1">
+                            <a class="animated" id="snips" data-toggle="collapse" style="cursor: pointer"
+                               data-target="#dropdown-lvl1">
+                                <i class="fa fa-code"></i> Code Snippets <i class="fa fa-caret-down"></i>
+                            </a>
+                            <div id="dropdown-lvl1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <li>
+                                            <a href data-toggle="modal" data-target="#jsModal">
+                                                JavaScript
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="collapse" style="cursor: pointer"
+                                               data-target="#dropdown-csharp">
+                                                C Sharp <i class="fa fa-caret-down"></i>
+                                            </a>
+                                            <div id="dropdown-csharp" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="nav navbar-nav">
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpCtrlModal">Controller
+                                                                <p class="help-block">(Home Controller)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpApiCtrlModal">ApiController
+                                                                <p class="help-block">(User API)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpDAOModal">DAO
+                                                                <p class="help-block">(User Data Access Object)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpServiceModal">Service
+                                                                <p class="help-block">(User Service)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpModelModal">Model
+                                                                <p class="help-block">(User Model)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpEntityModal">Entity
+                                                                <p class="help-block">(User Entity)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpMapperConfigModal">MapperConfig
+                                                                <p class="help-block">(User MapperConfig)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpDbContextModal">DbContext
+                                                                <p class="help-block">(User DbContext)</p>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href data-toggle="modal" data-target="#csharpUserLocatorModal">Locator
+                                                                <p class="help-block">(User Locator)</p>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="collapse" style="cursor: pointer"
+                                               data-target="#dropdown-angular">
+                                                AngularJS <i class="fa fa-caret-down"></i>
+                                            </a>
+                                            <div id="dropdown-angular" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <ul class="nav navbar-nav">
+                                                        <li><a href data-toggle="modal" data-target="#angularCtrlModal">Controller</a>
+                                                        </li>
+                                                        <li><a href data-toggle="modal"
+                                                               data-target="#angularDirectiveModal">Directive</a></li>
+                                                        <li><a href data-toggle="modal" data-target="#angularServiceModal">Service</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>

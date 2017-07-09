@@ -1,0 +1,27 @@
+<br>
+<tr>
+    <td>
+        <span style="margin-left: 20px" class="snipCSClass">public void </span>UpdateUser(<span class="snipCSNameS">UserEntity</span> entity)
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 20px">{</span>
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 40px" class="snipCSNameS">UserLocator</span>.GetUserDbContext().Entry(entity).State = System.Data.Entity.
+        <span class="snipCSDAO">EntityState</span>.Modified;
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 40px" class="snipCSNameS">UserLocator</span>.GetUserDbContext().SaveChanges();
+    </td>
+</tr>
+<tr>
+    <td>
+        <span style="margin-left: 20px">}</span>
+    </td>
+</tr>

@@ -1,0 +1,70 @@
+<style>
+    .fabToolbardemoBasicUsage md-fab-toolbar.md-right md-fab-trigger.align-with-text {
+        left: 7px;
+    }
+
+    .testing {
+        background-image: linear-gradient(to left, #000428, #004e92);
+    }
+
+    .customFab {
+        margin-bottom: 50px;
+    }
+</style>
+<div class="customFab" ng-if="isAuthenticated" ng-controller="FabCtrl" ng-cloak>
+    <md-fab-toolbar id="fabMenuBar" class="" md-open="fab.isOpen" count="fab.count"
+                    md-direction="{{fab.selectedDirection}}">
+        <!--<h2 class="pull-left" style="color: azure; line-height: 65px; padding-left: 15px">Hello, {{loggedInUser}}!!!</h2>-->
+        <md-fab-trigger class="align-with-text">
+            <md-button aria-label="menu" class="md-fab md-primary">
+                <md-icon class="fa fa-bars fa-2x"></md-icon>
+            </md-button>
+        </md-fab-trigger>
+
+        <md-toolbar ng-controller="NavbarCtrl">
+            <md-fab-actions class="md-toolbar-tools redir">
+                <md-button aria-label="login" class="md-icon-button testing" title="Log Out" href="#!/login" ng-click="authService.logout()">
+                    <md-icon class="fa fa-sign-out fa-2x"></md-icon>
+                </md-button>
+                <md-button aria-label="upload" class="md-icon-button testing" title="Uploader" ng-click="list()">
+                    <md-icon class="fa fa-list fa-2x"></md-icon>
+                </md-button>
+                <md-button aria-label="dashboard" class="md-icon-button testing" title="Dashboard" ng-click="dashboard()">
+                    <md-icon class="fa fa-building fa-2x"></md-icon>
+                </md-button>
+                <md-button aria-label="user" class="md-icon-button testing" title="Users" ng-click="users()">
+                    <md-icon class="fa fa-user fa-2x"></md-icon>
+                </md-button>
+                <md-button aria-label="upload" class="md-icon-button testing" title="Uploader" ng-click="upload()">
+                    <md-icon class="fa fa-upload fa-2x"></md-icon>
+                </md-button>
+                <md-button aria-label="contact" class="md-icon-button testing" title="Contact" ng-click="contact()">
+                    <md-icon class="fa fa-address-card fa-2x"></md-icon>
+                </md-button>
+                <md-button aria-label="home" class="md-icon-button testing" title="Home" ng-click="home()">
+                    <md-icon class="fa fa-home fa-2x"></md-icon>
+                </md-button>
+            </md-fab-actions>
+            <md-fab-actions ng-if="!isAuthenticated" class="activeRedir">
+                <h2 style="color: azure; line-height: 60px">Please Login!!!</h2>
+            </md-fab-actions>
+        </md-toolbar>
+    </md-fab-toolbar>
+</div>
+
+<script>
+
+    //    $(document).ready(function() {
+    //        $('#fabMenuBar').on('change', function() {
+    //            var open = document.getElementsByClassName('md-fab-toolber');
+    //            open.classList.add("customFab");
+    //        });
+    //    });
+
+    //    function fabs() {
+    //        var open = document.getElementsByClassName('md-fab-toolber');
+    //        if (open.fab.isOpen) {
+    //            open.classList.add("customFab");
+    //        }
+    //    }
+</script>
