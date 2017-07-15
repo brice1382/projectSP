@@ -18,8 +18,7 @@
             ];
 
             /**
-             * As this got larger I would separate it out into their own JSON files. For now here is faster to
-             * implement and easier to do.
+             * These will eventually be stored in a database. Added here for testing.
              */
             $scope.docs = [
                 {
@@ -56,12 +55,6 @@
                     helper: 'My visual reference of data flow using .NET'
                 }
             ];
-
-            // $scope.$on('$locationChangeStart', function () {
-            //     FlashManager.unFlashify();
-            // });
-
-
         }])
 
         .controller('GoalDetailsCtrl', ['$routeParams', 'GoalService', function ($routeParams, GoalService) {
@@ -80,24 +73,16 @@
             var vm = this;
 
             $scope.test = function () {
-
-
                 $http.get('views/dashboard/user.json')
                     .then(function (data, status, headers) {
                         vm.username = 'brice721';
-
                         var parameters = {
                             username: vm.username
                         };
-                        // var config = {
-                        //     params: parameters
-                        // };
                         $scope.Details = data;
                         console.clear();
                         localStorage.setItem('users', JSON.stringify(data));
                         var x = JSON.parse(localStorage.getItem('users'));
-                        debugger;
-                        // TODO: Right now the value for the username is hardcoded and it should be a variable. Figure out.
                         console.log('Name: ' + x.data.username.vm.username[0].name +
                             '\r\n' + 'Status: ' + x.status +
                             '\r\n' + 'Config: ' + x.config.headers.Accept +
@@ -116,7 +101,7 @@
                     });
             };
 
-            $scope.testies2 = function (data) {
+            $scope.testing2 = function (data) {
                 $http.get('views/dashboard/user.json').then(function (data) {
                     $scope.users = data;
                     var myObj = JSON.stringify(data);
@@ -137,19 +122,11 @@
             });
 
             sv.get = function (userId) {
-                debugger;
                 return apiResource.get({userId: userId}).$promise.then(function (user) {
                     sv.currentUser = user;
                     return user;
                 });
             };
-            // return $resource('app/views/dashboard/user.json', {}, {
-            //     query: {
-            //         method: 'GET',
-            //         params: {username: username, password: password},
-            //         isArray: true
-            //     }
-            // })
         }]);
 })();
 
