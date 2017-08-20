@@ -2,8 +2,7 @@
 
 Tech Used:
 
-AngularJS, jquery, ExpressJS, Mongodb, Animate.css, Sweetalert, Font Awesome and Bootstrap to name a few. Will likely
- be adding more as time goes on.
+AngularJS, Animate.css, Sweetalert, Font Awesome, SCSS and Bootstrap. For the server side code it is ASP.NET MVC 5, Entity Framework 6, WebApi 2 and MS SQL Server all hosted on a VPS instance with Vultr running Windows Server 2012 R2. 
 
 
 
